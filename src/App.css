@@ -1,0 +1,120 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.App-header {
+  /* background-color: #282c34; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Bounce */
+
+.box{
+  display: block;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #3673cf;
+  position: absolute;
+  -webkit-animation: moveX 8.05s linear 0s infinite alternate, moveY 8.4s linear 0s infinite alternate;
+  -moz-animation: moveX 8.05s linear 0s infinite alternate, moveY 8.4s linear 0s infinite alternate;
+  -o-animation: moveX 8.05s linear 0s infinite alternate, moveY 8.4s linear 0s infinite alternate;
+  animation: moveX 8.05s linear 0s infinite alternate, moveY 8.4s linear 0s infinite alternate;
+  transition: all 0.5s ease;
+  transform: translate(-50%, -50%); 
+}
+
+.boxbig{
+  width: 1000px;
+  height: 1000px;
+}
+
+/* .box:hover{
+  width: 1000px;
+  height: 1000px;
+  transition: all 0.5s ease;
+} */
+
+.info-text{
+  text-align: left;
+  width: 80vw;
+  margin: 10vw;
+}
+
+#info-0{
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* width: 100vw;
+  height: 100vh; */
+  width: 100vw;
+  height: 100vh;
+  z-index: 3000;
+  background-color: #3673cf;
+  color: white;
+  opacity: 0;
+  transition: all 0.9s ease;
+  visibility: hidden;
+}
+
+@-webkit-keyframes moveX {
+  from { left:  calc(0vw + 40px)  } to { left: calc(100vw - 40px) }
+}
+@-moz-keyframes moveX {
+  from { left:  calc(0vw + 40px)  } to { left:  calc(100vw - 40px)  }
+}
+@-o-keyframes moveX {
+  from { left:  calc(0vw + 40px)  } to { left:  calc(100vw - 40px)  }
+}
+@keyframes moveX {
+  from { left:  calc(0vw + 40px)  } to { left:  calc(100vw - 40px)  }
+}
+@-webkit-keyframes moveY {
+  from { top:  calc(0vh + 40px)  } to { top:  calc(100vh - 40px)  }
+}
+@-moz-keyframes moveY {
+  from { top:  calc(0vh + 40px)  } to { top:  calc(100vh - 40px)  }
+}
+@-o-keyframes moveY {
+  from { top:  calc(0vh + 40px)  } to { top:  calc(100vh - 40px)  }
+}
+@keyframes moveY {
+  from { top:  calc(0vh + 40px)  } to { top:  calc(100vh - 40px)  }
+}
